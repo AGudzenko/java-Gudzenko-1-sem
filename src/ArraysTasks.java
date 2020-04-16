@@ -3,7 +3,7 @@ public class ArraysTasks{
     public static void main(String[] args){
     int[] x = {20, 10, 30};
     int[] y = sortReverse(x);
-    
+    // ляляля
     arrays(6);
     System.out.println(hasSimilar(x));
     System.out.println(sr_znach(x));

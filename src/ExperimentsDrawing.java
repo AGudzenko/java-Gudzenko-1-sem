@@ -1,0 +1,13 @@
+public class ExperimentsDrawing {
+    public static void main(String[] args) {
+        Drawing d1 = new Drawing(5,5,'.');
+        Drawing d2 = new Drawing(5,5,'.');
+        //d1.print();
+        d1.setPoint(2,3,'q');
+        d1.drawVerticalLine(1,3,2,'-');
+        //d2.drawHorizontalLine(1,3,2,'-');
+        //d1.print();
+        d2.drawRectangle(1,3,1,3,'+');
+        d2.print();
+    }
+}

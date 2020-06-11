@@ -2,7 +2,8 @@ public class Drawing {
     int a;
     int b;
     char c;
-    char[][] mass = new char[a][b];
+    char[][] mass;
+
 
     Drawing(int a, int b, char c){
         this.a = a;
@@ -41,5 +42,22 @@ public class Drawing {
         drawVerticalLine(st1, st2, stolb2, c2);
         drawHorizontalLine(stolb1, stolb2, st2, c2);
         drawVerticalLine(st1, st2, stolb1, c2);
+    }
+    void draw(int x, int y, Drawing d){
+        int border_a;
+        int border_b;
+        int border_y = y;
+        if(d.a >= this.a)border_a = this.a;
+        else border_a = d.a;
+        if(d.b >= this.b)border_b = this.b;
+        else border_b = d.b;
+        for(int s = 0; s < border_a; s++){
+            border_y = y;
+            for(int s2 = 0; s2 < border_b; s2++){
+                this.mass[x][y] = d.mass[s][s2];
+                border_y++;
+            }
+            x++;
+        }
     }
 }

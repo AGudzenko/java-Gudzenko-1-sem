@@ -12,10 +12,23 @@ public class Transliterator {
         String rez = "";
         rez += simvol;
         for(int i = 0; i < eng.length; i++) {
-            if(simvol == rus[i]){
-                rez = eng[i];
-                break;
+            if(Character.toLowerCase(simvol) == rus[i]) {
+                if(Character.isLowerCase(simvol) || eng[i].length() == 0) {
+                    rez = eng[i];
+                    break;
+                } else if(Character.isUpperCase(simvol)) {
+                    rez = "";
+                    if(eng[i].length() > 1) {
+                        rez += Character.toUpperCase(eng[i].charAt(0)) + "" + eng[i].charAt(1);
+                        break;
+                    } else {
+                        rez += Character.toUpperCase(eng[i].charAt(0));
+                        break;
+                    }
+                }
+
             }
+
         }
         return rez;
     }

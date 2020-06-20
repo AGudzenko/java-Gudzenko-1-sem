@@ -8,13 +8,20 @@ public class ExperimentTransliterator {
         Transliterator t = new Transliterator(rus, eng);
         Transliterator t_nums = new Transliterator(nums, texts);
 
-        System.out.println(t.translateOneSymbol('я')); // ia
+        System.out.println(t.translateOneSymbol('Я')); // ia
         System.out.println(t.translateOneSymbol('$')); // $
         System.out.println(t.translate("экзамен")); // ekzamen
         System.out.println(t.translate("моё имя")); // ilia
 
         System.out.println(t_nums.translateOneSymbol('3'));
         System.out.println(t_nums.translate("8 6"));
+
+        System.out.println(t.translateOneSymbol('Р')); // R
+        System.out.println(t.translateOneSymbol('Я')); // Ia
+        System.out.println(t.translateOneSymbol('Ь')); //
+        System.out.println(t.translate("Моё имя")); // Ilia
+        System.out.println(t.translate("Яблоко")); // Iabloko
+        System.out.println(t.translate("ПАРАШЮТ")); // PARAShIuT
 
     }
 }

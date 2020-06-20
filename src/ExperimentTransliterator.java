@@ -5,7 +5,7 @@ public class ExperimentTransliterator {
         char[] nums = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         String[] texts = {"ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
 
-        Transliterator t = new Transliterator(rus, eng);
+        Transliterator t = Transliterator.createICAO_DOC_9303();
         Transliterator t_nums = new Transliterator(nums, texts);
 
         System.out.println(t.translateOneSymbol('Я')); // ia

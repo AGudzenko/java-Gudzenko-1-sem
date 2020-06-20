@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Transliterator {
-    public char[] rus;
-    public String[] eng;
+    private final char[] rus;
+    private final String[] eng;
 
     public Transliterator(char[]rus, String[] eng) {
         this.rus = rus;

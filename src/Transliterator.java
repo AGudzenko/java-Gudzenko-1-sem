@@ -48,14 +48,12 @@ public class Transliterator {
         return new Transliterator (a, b);
     }
     public void translateFile(String a, String b) throws Exception {
-
         try (PrintStream out = new PrintStream(b, "utf8")) {
             Path filePath = Paths.get(a);
             String s = Files.readString(filePath);
             String rez = translate(s);
             out.print(rez);
         }
-
 
     }
 
